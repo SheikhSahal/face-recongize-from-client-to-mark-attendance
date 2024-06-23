@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scanned Images</title>
+</head>
+<body>
+    <h1>Scanned Images</h1>
+    <ul>
+        {% for img in os.listdir('only_name') %}
+        <li><img src="{{ url_for('static', filename='only_name/' + img) }}" alt="{{ img }}"></li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+</body>
+</html>
